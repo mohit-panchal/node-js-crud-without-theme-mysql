@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Category</title>
+</head>
+
+<body>
+    <%-include('header')%>
+        <hr>
+        <form method="get">
+            <%if(categoryarray.length>0){%>
+                <table border="1">
+                    <thead>
+                        <th>Category Id</th>
+                        <th>Category Name</th>
+                        <th>Action</th>
+                    </thead>
+                    <%for(var i=0;i<categoryarray.length;i++){%>
+                        <tbody>
+                            <td>
+                                <%=categoryarray[i].category_id%>
+                            </td>
+                            <td>
+                                <%=categoryarray[i].category_name%>
+                            </td>
+                            <td>
+                                <a href="getcategoryprocess/catedit/<%=categoryarray[i].category_id%>">Edit</a> |
+                                <a href="getcategoryprocess/catdelete/<%=categoryarray[i].category_id%>">Delete</a>
+                            </td>
+                        </tbody>
+                        <%}%>
+                </table>
+                <%}else{%>
+                    No Record Found..
+                    <%}%>
+        </form>
+</body>
+
+</html>

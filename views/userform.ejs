@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+    <%-include('header')%>
+    <hr>
+    <h1>User Form</h1>
+    <form action="/userprocess" method="post">
+        <br>
+        <table border="1">
+            <tr>
+                <th>Name: </th>
+                <td><input type="text" name="user_name" placeholder="name"></td>
+            </tr>
+            <tr>
+                <th>Gender: </th>
+                <td><input type="text" name="user_gender" placeholder="gender"></td>
+            </tr>
+            <tr>
+                <th>Email: </th>
+                <td><input type="email" name="user_email" placeholder="email"></td>
+            </tr>
+            <tr>
+                <th>Mobile Number: </th>
+                <td><input type="tel" name="user_mobile" placeholder="mobilr number"></td>
+            </tr>
+            <tr>
+                <th>Password: </th>
+                <td><input type="password" name="user_pass" placeholder="password"></td>
+            </tr>
+            <tr>
+                <th>Address: </th>
+                <td><textarea name="user_address" placeholder="address"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit" >Submit</button>
+                    <button type="button" onClick="window.location='getuserdataprocess'" >Display</button>
+                </td>
+            </tr>
+        </table>
+       
+    </form>
+</body>
+</html>

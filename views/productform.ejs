@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+</head>
+
+<body>
+    <%-include('header')%>
+        <hr>
+        <h1>Product Form</h1>
+        <form action="/productform/productprocess" method="post" enctype="multipart/form-data">
+            <table border="1">
+                <tr>
+                    <th>Name: </th>
+                    <td><input type="text" name="product_name" placeholder="name"></td>
+                </tr>
+                <tr>
+                    <th>Details: </th>
+                    <td><input type="text" name="product_details" placeholder="details"></td>
+                </tr>
+                <tr>
+                    <th>Price: </th>
+                    <td><input type="number" name="product_price" placeholder="price"></td>
+                </tr>
+                <tr>
+                    <th>Image: </th>
+                    <td><input type="file" name="product_image" placeholder="img"></td>
+                </tr>
+
+                <tr>
+                    <th>Category : </th>
+                    <td><select name="category_name">
+                            <%for(var i=0;i<category_array.length;i++){%>
+                                <option>
+                                    <%=category_array[i].category_name%>
+                                </option>
+                                <%}%>
+                        </select></td>
+
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">Submit</button>
+                        <button type="button" onClick="window.location='productform/getproductdataprocess'">Display</button>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+</body>
+
+</html>

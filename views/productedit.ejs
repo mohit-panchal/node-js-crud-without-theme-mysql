@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+</head>
+<body>
+    <%-include('header')%>
+    <hr>
+    <form method="post">
+        <table border="1">
+            <tr>
+                <th>Name: </th>
+                <td><input type="text" name="product_name" placeholder="name" value="<%=product_array[0].product_name%>"></td>
+            </tr>
+            <tr>
+                <th>Details: </th>
+                <td><input type="text" name="product_details" placeholder="details" value="<%=product_array[0].product_details%>"></td>
+            </tr>
+            <tr>
+                <th>Price: </th>
+                <td><input type="number" name="product_price" placeholder="price" value="<%=product_array[0].product_price%>"></td>
+            </tr>
+            <tr>
+                <th>Image: </th>
+                <td><input type="text" name="product_image" placeholder="img" value="<%=product_array[0].product_image%>"></td>
+            </tr>
+            <tr>
+                <th>Category Id: </th>
+                <td><input type="number" name="category_id" placeholder="cat id" value="<%=product_array[0].category_id%>"></td>
+            </tr>
+            
+                <td colspan="2">
+                    <button type="submit" >Update</button>
+                </td>
+            </tr>
+        </table>
+       
+    </form>
+</body>
+</html>

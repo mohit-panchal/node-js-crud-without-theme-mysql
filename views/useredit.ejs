@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+    <%-include('header')%>
+    <br><br>
+    <form method="post">
+        <br>
+        <table border="1">
+            <tr>
+                <th>Name: </th>
+                <td><input type="text" name="user_name" placeholder="name" value="<%=user_array[0].user_name%>"></td>
+            </tr>
+            <tr>
+                <th>Gender: </th>
+                <td><input type="text" name="user_gender" placeholder="gender" value="<%=user_array[0].user_gender%>"></td>
+            </tr>
+            <tr>
+                <th>Email: </th>
+                <td><input type="email" name="user_email" placeholder="email" value="<%=user_array[0].user_email%>"></td>
+            </tr>
+            <tr>
+                <th>Mobile Number: </th>
+                <td><input type="tel" name="user_mobile" placeholder="mobilr number" value="<%=user_array[0].user_mobile%>"></td>
+            </tr>
+            <tr>
+                <th>Password: </th>
+                <td><input type="password" name="user_pass" placeholder="password" value="<%=user_array[0].user_pass%>"></td>
+            </tr>
+            <tr>
+                <th>Address: </th>
+                <td><textarea name="user_address" placeholder="address" ><%=user_array[0].user_address%></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit" >Update</button>
+                    
+                </td>
+            </tr>
+        </table>
+       
+    </form>
+</body>
+</html>

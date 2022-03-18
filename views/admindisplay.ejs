@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <%-include('header')%>
+    <hr>
+    <form method="get">
+        <%if(admin_array.length>0){%>
+    <table border="1">
+        <thead>
+            <th>Admin Id</th>
+            <th>Admin Name</th>
+            <th>Admin Email</th>
+            <th>Admin Password</th>
+            <th>Action</th>
+        </thead>
+        <%for(var i=0;i<admin_array.length;i++){%>
+        <tbody>
+            <td><%=admin_array[i].admin_id%></td>
+            <td><%=admin_array[i].admin_name%></td>
+            <td><%=admin_array[i].admin_email%></td>
+            <td><%=admin_array[i].admin_pass%></td>
+            <td>
+                <a href="/adminedit/<%=admin_array[i].admin_id%>">Edit</a> |
+                <a href="/admindelete/<%=admin_array[i].admin_id%>">Delete</a>
+            </td>
+        </tbody>
+        <%}%>
+    </table>
+    <%}else{%>
+        No Record Found..
+        <%}%>
+</form>
+</body>
+</html>

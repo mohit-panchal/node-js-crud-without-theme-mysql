@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Category</title>
+</head>
+
+<body>
+    <%-include('header')%>
+        <hr>
+        <form method="post">
+            <table border="1">
+                <tr>
+                    <th>Name: </th>
+                    <td><input type="text" name="category_name" placeholder="name"
+                            value="<%=category_array[0].category_name%>"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">Upadate</button>
+
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+</body>
+
+</html>

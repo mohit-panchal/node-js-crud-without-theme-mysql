@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+</head>
+
+<body>
+    <%-include('header')%>
+        <hr>
+        <form method="get">
+            <%if(product_array.length>0){%>
+                <table border="1">
+                    <thead>
+                        <th>Product Id</th>
+                        <th>Name</th>
+                        <th>Details</th>
+                        <th>Price</th>
+                        <th>Image</th>
+                        <th>Category Name</th>
+                        <th>Action</th>
+                    </thead>
+                    <%for(var i=0;i<product_array.length;i++){%>
+                        <tbody>
+                            <td>
+                                <%=product_array[i].product_id %>
+                            </td>
+                            <td>
+                                <%=product_array[i].product_name%>
+                            </td>
+                            <td>
+                                <%=product_array[i].product_details%>
+                            </td>
+                            <td>
+                                <%=product_array[i].product_price%>
+                            </td>
+                            <td><img src="<%=product_array[i].product_image%>" alt="no Load" height="100" width="100">
+                            </td>
+                            <td>
+                                <%=product_array[i].category_name%>
+                            </td>
+                            <td>
+                                <a href="getproductdataprocess/productedit/<%=product_array[i].product_id %>">Edit</a> |
+                                <a href="getproductdataprocess/productdelete/<%=product_array[i].product_id %>">Delete</a>
+                            </td>
+                        </tbody>
+                        <%}%>
+                </table>
+                <%}else{%>
+                    No Record Found..
+                    <%}%>
+        </form>
+</body>
+
+</html>

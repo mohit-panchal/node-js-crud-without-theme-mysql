@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+    <%-include('header')%>
+    <hr>
+    <form method="get">
+        <%if(user_array.length>0){%>
+    <table border="1">
+        <thead>
+            <th>User Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+            <th>Password</th>
+            <th>Address</th>
+            <th>Action</th>
+        </thead>
+        <%for(var i=0;i<user_array.length;i++){%>
+        <tbody>
+            <td><%=user_array[i].user_id  %></td>
+            <td><%=user_array[i].user_name%></td>
+            <td><%=user_array[i].user_gender%></td>
+            <td><%=user_array[i].user_email%></td>
+            <td><%=user_array[i].user_mobile%></td>
+            <td><%=user_array[i].user_pass%></td>
+            <td><%=user_array[i].user_address%></td>
+            <td>
+                <a href="/useredit/<%=user_array[i].user_id  %>">Edit</a> |
+                <a href="/userdelete/<%=user_array[i].user_id  %>">Delete</a>
+            </td>
+        </tbody>
+        <%}%>
+    </table>
+    <%}else{%>
+        No Record Found..
+        <%}%>
+</form>
+</body>
+</html>

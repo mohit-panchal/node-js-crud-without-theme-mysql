@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+</head>
+<body>
+    <%-include('header')%>
+    <hr>
+    <h1>Admin Form</h1>
+    <form action="/adminprocess" method="post">
+        welcome  <%-admin_name%>
+        <br><br>
+        <table border="1">
+            <tr>
+                <th>Name: </th>
+                <td><input type="text" name="admin_name" placeholder="name"></td>
+            </tr>
+            <tr>
+                <th>Email: </th>
+                <td><input type="email" name="admin_email" placeholder="email"></td>
+            </tr>
+            <tr>
+                <th>Password: </th>
+                <td><input type="password" name="admin_pass" placeholder="password"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit" >Submit</button>
+                    <button type="button" onClick="window.location='getadmindataprocess'" >Display</button>
+                </td>
+            </tr>
+        </table>
+       
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+</head>
+<body>
+    <%-include('header')%>
+    <hr>
+    <form method="post">
+        <table border="1">
+            <tr>
+                <th>Name: </th>
+                <td><input type="text" name="admin_name" placeholder="name" value="<%=admin_array[0].admin_name%>"></td>
+            </tr>
+            <tr>
+                <th>Email: </th>
+                <td><input type="email" name="admin_email" placeholder="email" value="<%=admin_array[0].admin_email%>"></td>
+            </tr>
+            <tr>
+                <th>Password: </th>
+                <td><input type="password" name="admin_pass" placeholder="password" value="<%=admin_array[0].admin_pass%>"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit" >Upadate</button>
+                   
+                </td>
+            </tr>
+        </table>
+       
+    </form>
+</body>
+</html>

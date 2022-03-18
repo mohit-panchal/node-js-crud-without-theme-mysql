@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Category</title>
+</head>
+
+<body>
+    <%-include('header')%>
+        <hr>
+        <h1>Category Form</h1>
+        <form action="/categoryform/categoryprocess" method="post">
+            <table border="1">
+                <tr>
+                    <th>Name: </th>
+                    <td><input type="text" name="category_name" placeholder="name"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">Submit</button>
+                        <button type="button"
+                            onClick="window.location='categoryform/getcategorydataprocess'">Display</button>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+</body>
+
+</html>
